@@ -32,7 +32,6 @@ class Observable {
             // A Symbol so it does not show up in Object.getOwnPropertyNames()
             const storageKey = Symbol.for(property + "Storage")
             const valInfoKey = Symbol.for(property + "ValInfo")
-            const oldSetter = propertyDescriptor.set
             Object.defineProperties(
                 fromPrototype ? Object.getPrototypeOf(this) : this,
                 {
